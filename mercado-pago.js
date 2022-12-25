@@ -1,2 +1,4 @@
 const nome = "mercado-pago";
-console.log(nome);
+const d = "devedor";
+
+console.log(nome, d);
