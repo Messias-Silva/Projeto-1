@@ -109,6 +109,27 @@ input[type=checkbox]{
     }
 }
 
+/* CONTAINER */
+
+.container{
+    display: grid;
+    padding-right: 10px;
+    margin-top: 10px;
+    border: 1px solid #4c9e9e;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and(min-width:800px){
+    .container{
+        margin: 1em 2em;
+    }
+   
+}
+.col{
+    width: 80%;
+    background-color: #4c9e9e;
+    gap: 5px;
+}
+
 /* *{margin: 0; padding: 0; box-sizing: 0;}
 
 body{
