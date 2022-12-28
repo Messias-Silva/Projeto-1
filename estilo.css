@@ -75,7 +75,7 @@ input[type=checkbox]{
 }
 /* APLICAÇÃO MEDIA QUEREIES */
 
-@media (max-width: 768px){
+@media (max-width: 810px){
     .menu{
         display: none;
         position: absolute;
@@ -112,23 +112,88 @@ input[type=checkbox]{
 /* CONTAINER */
 
 .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 0px 0px;
     display: grid;
-    padding-right: 10px;
-    margin-top: 10px;
-    border: 1px solid #4c9e9e;
-    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:  
+    "sidenav item item"
+    "sidenav item item"
+    "sidenav item item"
+    "footer footer footer"
+    ;
+    justify-content: center;
 }
-@media screen and(min-width:800px){
+img{
+    width: 100%;
+    border-radius: 20px;
+}
+.sidenav{
+    max-width: 300px;
+    min-width: 250px;
+    height: 950px;
+
+    background-color: #333;
+    /* border-radius: 20px; */
+
+    grid-area: "sidenav";
+    grid-row: sidenav;
+}
+.item{
+    max-width: 300px;
+    min-width: 250px;
+    height: 300px;
+    border-radius: 20px;
+
+    background-color: #4c9e9e ;
+
+    grid-area: "item";
+}
+.footer{
+    width: auto;
+    height: 80px;
+
+    background-color: #333;
+
+    grid-area: "footer";
+    grid-column: footer;
+}
+@media(max-width: 810px){
     .container{
-        margin: 1em 2em;
+        transition: 0.5s ease-out;
+        transform: translate3d(35%);
+        grid-template-areas:  
+        "sidenav item"
+        "sidenav item"
+        "sidenav item"
+        "sidenav item"
+        "sidenav item"
+        "sidenav item"
+        "footer footer"
+        "footer footer"
+        ;
     }
-   
 }
-.col{
-    width: 80%;
-    background-color: #4c9e9e;
-    gap: 5px;
+
+@media(max-width: 450px){
+    .sidenav{
+        height: 150px;
+    }
+    .container{
+        transition: 0.3s ease;
+        grid-template-areas:  
+        "sidenav"
+        "item"
+        "item"
+        "item"
+        "item"
+        "item"
+        "footer"
+        ;
+    }
 }
+
 
 /* *{margin: 0; padding: 0; box-sizing: 0;}
 
