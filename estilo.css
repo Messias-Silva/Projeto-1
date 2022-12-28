@@ -140,6 +140,9 @@ img{
     grid-area: "sidenav";
     grid-row: sidenav;
 }
+.sidenav h1{
+    color: white;
+}
 .item{
     max-width: 300px;
     min-width: 250px;
